@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #7aacff;
+    margin: 0; 
+    overflow: hidden; 
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed; 
+    left: 0;
+    overflow: hidden;
+
+
+    box-shadow: 10px 25px 30px rgba(30, 30, 200, 0.3);
+    position: relative; 
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(69, 180, 86, 0.25); 
+    z-index: 2; 
+}
+
+
+@font-face {
+    font-family: 'CodecWarmExtraBold'; 
+    src: url('fonts/Codec-Warm-ExtraBold-trial.woff2') format('woff2'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: white;
+    font-size: 9rem; 
+    font-weight: bold;
+    font-family: 'CodecWarmExtraBold', sans-serif; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+    z-index: 3; 
+    text-align: center;
+    padding: 20px; 
+}
+
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    animation: slide 16s infinite;
+    position: relative;
+    z-index: 1; 
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    55% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-200%);
+    }
+    80% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(-300%);
+    }
+}
+
+img {
+    width: 100%;
+    height: auto; 
+    position: relative; 
+    z-index: 1;
+}
+
+.logo {
+    position: absolute;
+    bottom: 10px;
+    left: 10px; 
+    width: 300px; 
+    height: auto; 
+    z-index: 4; 
+}
+
+.input-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+.hidden {
+    display: none;
+}
