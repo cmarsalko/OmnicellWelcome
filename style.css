@@ -15,11 +15,10 @@ body {
     height: 100vh;
     position: fixed; 
     left: 0;
+    top: 0;
     overflow: hidden;
-
-
     box-shadow: 10px 25px 30px rgba(30, 30, 200, 0.3);
-    position: relative; 
+    z-index: 1; 
 }
 
 .overlay {
@@ -32,14 +31,12 @@ body {
     z-index: 2; 
 }
 
-
 @font-face {
     font-family: 'CodecWarmExtraBold'; 
     src: url('fonts/Codec-Warm-ExtraBold-trial.woff2') format('woff2'); 
     font-weight: normal;
     font-style: normal;
 }
-
 
 .text-overlay {
     position: absolute;
@@ -56,9 +53,8 @@ body {
     padding: 20px; 
 }
 
-
 .wrapper {
-    width: 100%;
+    width: 400%; /* Adjust based on the number of images */
     height: 100%;
     display: flex;
     animation: slide 16s infinite;
@@ -94,8 +90,9 @@ body {
 }
 
 img {
-    width: 100%;
-    height: auto; 
+    width: 100vw; /* Ensure image covers the full viewport width */
+    height: 100vh; /* Ensure image covers the full viewport height */
+    object-fit: cover; /* Ensure image covers the container without distortion */
     position: relative; 
     z-index: 1;
 }
